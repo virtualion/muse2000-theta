@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Virtualion</title>
+
+  <link rel="stylesheet" href="assets/css/index.css">
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+  />
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script type="module" src="assets/js/index2.js"></script>
+</head>
+<body>
+  <nav class="navigation">
+    <div class="leftNavigation">
+      <button class="hamburgerBtn">
+        <img class="img" src="assets/icon/hamburger-icon.png"/>
+      </button>
+      <button class="closeNavigationBtn hide">
+        <img class="img" src="assets/icon/close-icon.png"/>
+      </button>
+      <div class="navigation__app">
+        <span class="app__logo"></span>
+        <p class="app__text bodyMediumMedium bodyLargeBold-md">Virtualion</p>
+      </div>
+    </div>
+    <ul class="navigation-group">
+      <li class="bodySmallReguler list-item">Home</li>
+      <li class="bodySmallReguler list-item">Our Curators</li>
+      <li class="bodySmallReguler list-item">About</li>
+      <li class="bodySmallReguler list-item">News</li>
+      <li class="bodySmallReguler list-item">Contact</li>
+    </ul>
+
+    <div class="buttonGroup">
+      <!-- Button Tutorial -->
+      <div class="tutorialContainer">
+        <button class="tutorialBtn">
+          <svg class="icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8.33333 7.0852C8.48016 6.6678 8.76998 6.31584 9.15144 6.09165C9.53291 5.86745 9.98141 5.7855 10.4175 5.86031C10.8536 5.93511 11.2492 6.16184 11.5341 6.50034C11.8191 6.83884 11.975 7.26726 11.9744 7.70973C11.9744 8.9588 10.1008 9.58333 10.1008 9.58333M10.1249 12.0833H10.1333M8.25 16L9.46667 17.6222C9.6476 17.8635 9.73807 17.9841 9.84897 18.0272C9.94611 18.065 10.0539 18.065 10.151 18.0272C10.2619 17.9841 10.3524 17.8635 10.5333 17.6222L11.75 16C11.9943 15.6743 12.1164 15.5114 12.2654 15.3871C12.4641 15.2213 12.6986 15.104 12.9504 15.0446C13.1393 15 13.3429 15 13.75 15C14.9149 15 15.4973 15 15.9567 14.8097C16.5693 14.556 17.056 14.0693 17.3097 13.4567C17.5 12.9973 17.5 12.4149 17.5 11.25V6.5C17.5 5.09987 17.5 4.3998 17.2275 3.86502C16.9878 3.39462 16.6054 3.01217 16.135 2.77248C15.6002 2.5 14.9001 2.5 13.5 2.5H6.5C5.09987 2.5 4.3998 2.5 3.86502 2.77248C3.39462 3.01217 3.01217 3.39462 2.77248 3.86502C2.5 4.3998 2.5 5.09987 2.5 6.5V11.25C2.5 12.4149 2.5 12.9973 2.6903 13.4567C2.94404 14.0693 3.43072 14.556 4.04329 14.8097C4.50272 15 5.08515 15 6.25 15C6.65715 15 6.86072 15 7.04959 15.0446C7.30141 15.104 7.53593 15.2213 7.73458 15.3871C7.88357 15.5114 8.00571 15.6743 8.25 16Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>          
+        </button>
+
+        <div class="tutorialDrawer">
+          <div class="swiper-tutorial-virtualion">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide tutorialItem">
+                <div class="tutorialIllustration">
+                  <img class="img" src="/assets/img/tutorial/how-to-move-1.png" alt=""/>
+                </div>
+                <div class="tutorialInstructions">
+                  <p class="title heading-6">HOW TO MOVE <span class="bodyLargeBold">(<span>1</span>/2)</span></p>
+                  <ul class="instructions">
+                    <li class="bodyLargeBold">Right drag to move the viewpoint, wheel or pinch in/out to zoom in/out.</li>
+                    <li class="bodyLargeBold">Use the <span class="bold">WSAD</span> keys to move forward, backward, left, and right.</li>
+                    <li class="bodyLargeBold">Double click on walls or floors to move to the clicked point</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="swiper-slide tutorialItem">
+                <div class="tutorialIllustration">
+                  <img class="img" src="/assets/img/tutorial/how-to-move-2.png" alt=""/>
+                </div>
+                <div class="tutorialInstructions">
+                  <p class="title heading-6">HOW TO MOVE <span class="bodyLargeBold">(<span>2</span>/2)</span></p>
+                  <ul class="instructions">
+                    <li class="bodyLargeBold">Display switching (on/off) for controller of movement with mouse</li>
+                    <li class="bodyLargeBold">Move with mouse:Drag on the translucent panel on the translucent panel to move around.</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="swiper-slide tutorialItem">
+                <div class="tutorialIllustration">
+                  <img class="img" src="/assets/img/tutorial/how-to-show-caption.png" alt=""/>
+                </div>
+                <div class="tutorialInstructions">
+                  <p class="title heading-6">HOW TO SHOW CAPTION</p>
+                  <ul class="instructions">
+                    <li class="bodyLargeBold">Open caption panel with a button on the right-below, and then yellow markers show up (only if available).</li>
+                    <li class="bodyLargeBold">Click on the marker to display the caption in the lower left window. The caption content will appear in the lower left window.If there is a "FIND MORE" button, click it for more information.</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="swiper-slide tutorialItem">
+                <div class="tutorialIllustration">
+                  <img class="img" src="/assets/img/tutorial/how-to-control-audio.png" alt=""/>
+                </div>
+                <div class="tutorialInstructions">
+                  <p class="title heading-6">HOW TO CONTROL AUDIO</p>
+                  <ul class="instructions">
+                    <li class="bodyLargeBold">When you approach the video, the playback panel appears. The playback position can be adjusted with the seek bar. Volume can be adjusted with the bar on the right.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiperController">
+            <!-- Pagination -->
+            <div class="tutorialPagination">
+              <span class="paginationItem active"></span>
+              <span class="paginationItem"></span>
+              <span class="paginationItem"></span>
+              <span class="paginationItem"></span>
+            </div>
+
+            <!-- Navigation -->
+            <div class="tutorialNavigation">
+              <button class="navigationButton prevBtnTutorial disabled">
+                <svg class="arrowIcon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20 12H4M4 12L10 18M4 12L10 6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>                  
+              </button>
+              <button class="navigationButton nextBtnTutorial">
+                <svg class="arrowIcon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4 12H20M20 12L14 6M20 12L14 18" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>                  
+              </button>
+            </div>
+          </div>
+
+          <div class="borderBottomTutorial">
+            <div class="borderInner"></div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Button Share -->
+      <div class="shareContainer">
+        <button class="shareBtn">
+          <svg class="icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.5 10V13.5C17.5 14.9001 17.5 15.6002 17.2275 16.135C16.9878 16.6054 16.6054 16.9878 16.135 17.2275C15.6002 17.5 14.9001 17.5 13.5 17.5H6.5C5.09987 17.5 4.3998 17.5 3.86502 17.2275C3.39462 16.9878 3.01217 16.6054 2.77248 16.135C2.5 15.6002 2.5 14.9001 2.5 13.5V10M13.3333 5.83333L10 2.5M10 2.5L6.66667 5.83333M10 2.5V12.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>        
+        </button>
+
+        <div class="shareDrawer">
+          <p class="bodyMediumMedium title">Share this with your social community</p>
+
+          <!-- Action Group -->
+          <div class="socialMediaGroupBtn">
+
+            <!-- Button Pinterest -->
+            <button class="socialMediaBtn pinterest">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="10.5" fill="white"/>
+                <path d="M12 22.5C17.799 22.5 22.5 17.799 22.5 12C22.5 6.20101 17.799 1.5 12 1.5C6.20101 1.5 1.5 6.20101 1.5 12C1.5 16.2601 4.03702 19.9276 7.68261 21.5742C7.6875 21.4605 7.69301 21.3564 7.69773 21.2671C7.70416 21.1453 7.70914 21.0511 7.70914 20.9982C7.70914 20.6827 7.92368 19.1178 7.92368 19.1178L9.23618 13.729C9.03426 13.4008 8.88281 12.7067 8.88281 12.1767C8.88281 9.72836 10.2458 9.19831 11.0787 9.19831C12.1388 9.19831 12.3786 10.3467 12.3786 11.1923C12.3786 11.6396 12.1466 12.3396 11.9079 13.06C11.6548 13.8236 11.3942 14.61 11.3942 15.1424C11.3942 16.1773 12.4165 16.6947 13.1232 16.6947C14.991 16.6947 16.7073 14.3473 16.7073 12C16.7073 9.65264 15.6094 6.81309 12.0126 6.81309C8.41587 6.81309 6.80048 9.55167 6.80048 11.6466C6.80048 13.0601 7.33053 14.0949 7.59556 14.2716C7.67128 14.3389 7.8 14.5467 7.70914 14.8395C7.61827 15.1323 7.45253 15.786 7.38101 16.0763C7.3726 16.1436 7.29267 16.258 7.04027 16.1773C6.72476 16.0763 4.71815 14.8143 4.71815 11.6466C4.71815 8.47896 7.20433 4.79386 12.0126 4.79386C16.8209 4.79386 19.2819 8.02463 19.2819 12C19.2819 15.9754 16.0637 18.512 13.6154 18.512C11.6567 18.512 10.8894 17.637 10.7506 17.1995L10.006 20.0391C9.8302 20.5101 9.50222 21.3568 9.09778 22.0938C10.0195 22.3583 10.9932 22.5 12 22.5Z" fill="#BB0F23"/>
+              </svg>                
+            </button>
+
+            <!-- Button Twitter -->
+            <button class="socialMediaBtn twitter">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.84156 21C6.41531 21 4.15363 20.2943 2.25 19.0767C3.86624 19.1813 6.71855 18.9308 8.49268 17.2386C5.82381 17.1161 4.6202 15.0692 4.4632 14.1945C4.68997 14.2819 5.77148 14.3869 6.382 14.142C3.31192 13.3722 2.84095 10.678 2.94561 9.85573C3.52125 10.2581 4.49809 10.3981 4.88185 10.3631C2.02109 8.31618 3.05027 5.23707 3.55613 4.57226C5.60912 7.4165 8.6859 9.01393 12.4923 9.10278C12.4205 8.78802 12.3826 8.46032 12.3826 8.12373C12.3826 5.70819 14.3351 3.75 16.7435 3.75C18.0019 3.75 19.1358 4.28457 19.9318 5.13963C20.7727 4.94258 22.0382 4.4813 22.6569 4.0824C22.3451 5.20208 21.3742 6.13612 20.7869 6.48231C20.7821 6.47048 20.7918 6.49408 20.7869 6.48231C21.3028 6.40428 22.6986 6.13603 23.25 5.76192C22.9773 6.39094 21.948 7.4368 21.1033 8.02232C21.2605 14.9535 15.9574 21 8.84156 21Z" fill="#47ACDF"/>
+              </svg>                
+            </button>
+
+            <!-- Button Facebook -->
+            <button class="socialMediaBtn facebook">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="10.5" fill="url(#paint0_linear_2191_2222)"/>
+                <path d="M15.9103 15.2112L16.3767 12.2476H13.4589V10.3252C13.4589 9.51428 13.8657 8.7233 15.1726 8.7233H16.5V6.20024C16.5 6.20024 15.2959 6 14.1452 6C11.7411 6 10.1712 7.4197 10.1712 9.98883V12.2476H7.5V15.2112H10.1712V22.3759C10.7075 22.458 11.2562 22.5 11.8151 22.5C12.374 22.5 12.9226 22.458 13.4589 22.3759V15.2112H15.9103Z" fill="white"/>
+                <defs>
+                  <linearGradient id="paint0_linear_2191_2222" x1="12" y1="1.5" x2="12" y2="22.4377" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#18ACFE"/>
+                    <stop offset="1" stop-color="#0163E0"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </button>
+          </div>
+
+          <p class="bodySmallReguler titleCopy">or copy link</p>
+
+          <div class="copyContainer">
+            <span class="bodySmallMedium textCopy">https://virtualion.com/shots/22507308-Team-Fortress-2-Gambling-Design?utm_source=Clipboard_Shot&utm_campaign=Bangdesign&utm_content=Team%20Fortress%202%20-%20Gambling%20Design&utm_medium=Social_Share&utm_source=Clipboard_Shot&utm_campaign=Bangdesign&utm_content=Team%20Fortress%202%20-%20Gambling%20Design&utm_medium=Social_Share</span>
+            <button class="bodySmallMedium btnCopy">Copy</button>
+          </div>
+        </div>
+      </div>
+
+      <span class="v-divider"></span>
+
+      <button class="subscribeBtn">
+        <span class="label bodySmallMedium">Subscribe</span>
+      </button>
+    </div>
+  </nav>
+  <div class="navigationDrawer">
+    <ul class="navigationGroup">
+      <li class="bodySmallReguler item">Home</li>
+      <li class="bodySmallReguler item">Our Curators</li>
+      <li class="bodySmallReguler item">About</li>
+      <li class="bodySmallReguler item">News</li>
+      <li class="bodySmallReguler item">Contact</li>
+    </ul>
+
+    <div class="groupButton">
+      <button>
+        <img src="assets/icon/question-icon.png" class="img"/>
+      </button>
+      <button>
+        <img src="assets/icon/share-icon.png" class="img"/>
+      </button>
+    </div>
+  </div>
+
+  <main>
+    <!-- Modal -->
+    <div class="modalPreviewVirtualion hide">
+      <!-- Modal Overlay -->
+      <div class="modalOverlay"></div>
+
+      <!-- Close Button -->
+      <button class="modalCloseButton">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17 7L7 17M7 7L17 17" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>          
+      </button>
+
+      <!-- Modal Inner Container -->
+      <div class="modalInnerContainer">
+        <div class="imgContainer">
+          <img class="img" src="/assets/img/thumbnail1/11002.jpg" alt=""/>
+        </div>
+
+        <div class="contentContainer">
+          <div class="contentHeader">
+            <div class="contentTitleContainer">
+              <p class="contentTitle bodyLargeBold">MORI Building Digital Art Museum</p>
+              <div class="contentTitle verified">
+                <img class="contentTitle verifiedIcon" src="/assets/icon/check-verified-icon.png" alt=""/>
+                <p class="contentTitle verifiedBy bodySmallMedium">Anderson</p>
+              </div>
+            </div>
+            <div class="statistic">
+              <div class="item likeBtn">
+                <!-- Love Icon -->
+                <img src="/assets/icon/heart.png" class="icon like" alt=""/>
+                <img src="/assets/icon/heart-gray.png" class="icon unlike" alt=""/>
+                <p class="captionReguler label like">196</p>
+              </div>
+              <div class="item">
+                <!-- Eye Icon -->
+                <img src="/assets/icon/eye.png" class="icon" alt=""/>
+                <p class="captionReguler label view">3</p>
+              </div>
+            </div>
+          </div>
+          <div class="contentCreatorContainer">
+            <p class="creatorValue bodySmallReguler">Jack Mackinnon</p>
+            <p class="creatorLabel captionReguler">(Creator)</p>
+          </div>
+          <p class="contentDescription bodySmallReguler">Lorem ipsum dolor sit amet consectetur. Amet mauris integer leo eget tristique suspendisse id non dolor. Blandit orci massa elementum lorem. Molestie rutrum a massa morbi lectus id blandit. Ornare</p>
+          <div class="footerContainer">
+            <a href="#" class="getStartedButton" target="_blank">
+              <span class="bodyMediumMedium">
+                Enter Museum
+              </span>
+            </a>
+
+            <div class="labelAvailibility">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.99817 7.50507V10.8384M9.99817 14.1717H10.0065M8.84427 3.24818L1.99019 15.087C1.61002 15.7437 1.41994 16.072 1.44803 16.3415C1.47254 16.5765 1.59568 16.7901 1.78681 16.9291C2.00594 17.0884 2.38533 17.0884 3.1441 17.0884H16.8522C17.611 17.0884 17.9904 17.0884 18.2095 16.9291C18.4007 16.7901 18.5238 16.5765 18.5483 16.3415C18.5764 16.072 18.3863 15.7437 18.0061 15.087L11.1521 3.24817C10.7733 2.59387 10.5839 2.26672 10.3368 2.15684C10.1212 2.061 9.87513 2.061 9.65959 2.15684C9.41248 2.26672 9.22307 2.59387 8.84427 3.24818Z" stroke="#FCC838" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>                
+              <p class="captionReguler">Not Available on Mobile</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero__container">
+        <div class="information-container">
+          <h1 class="title heading-4 heading-3-md">世界のすべてを<br>　ミュージアムに。</h1>
+          <p class="description bodySmallReguler bodyMediumReguler-md">知への没入へようこそ。ここには、幾千ものミュージアムがあります。あなたは自由に参加できます。現在の館数: 100,663</p>
+        </div>
+
+        <!-- Search Input -->
+        <div class="search">
+          <img class="icon" src="/assets/icon/search-lg.png" alt="" />
+          <input
+            id="search-museum"
+            type="text"
+            class="input bodyMediumReguler"
+            placeholder="Search..."
+          />
+        </div>
+
+        <!-- Trending Search -->
+        <!--<div class="trendingSearch">
+          <p class="captionReguler title">Trending searches</p>
+
+          <ul class="trending-list list">
+            <li class="bodySmallReguler item trending-item" data-search="Tokyo">Tokyo</li>
+            <li class="bodySmallReguler item trending-item" data-search="Modern">Modern</li>
+            <li class="bodySmallReguler item trending-item" data-search="Digital">Digital</li>
+            <li class="bodySmallReguler item trending-item" data-search="Century">Century</li>
+            <li class="bodySmallReguler item trending-item" data-search="Prefectural">Prefectural</li>
+            <li class="bodySmallReguler item trending-item" data-search="History">History</li>
+          </ul>
+        </div>-->
+
+        <!-- Featured -->
+        <div class="featured">
+          <div class="nav">
+            <button class="prevBtn">
+              <img class="img" src="/assets/icon/arrow-narrow-left.png" alt=""/>
+            </button>
+            <button class="nextBtn">
+              <img class="img" src="/assets/icon/arrow-narrow-right.png" alt=""/>
+            </button>
+          </div>
+
+          <div class="swiper-featured">
+            <div id="listFeaturedMuseum" class="swiper-wrapper">
+              <!-- Featured Item -->
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Content -->
+    <section class="content">
+      <div class="container">
+        <ul class="filters-category">
+          <li class="filter-item bodySmallMedium" data-filter="art">Art</li>
+          <li class="filter-item bodySmallMedium" data-filter="city">City</li>
+          <li class="filter-item bodySmallMedium" data-filter="culture">Culture</li>
+          <li class="filter-item bodySmallMedium" data-filter="geography">Geography</li>
+          <li class="filter-item bodySmallMedium" data-filter="person">Person</li>
+          <li class="filter-item bodySmallMedium" data-filter="science">Science</li>
+          <li class="filter-item bodySmallMedium" data-filter="social">Social</li>
+          <li class="filter-item bodySmallMedium" data-filter="technology">Technology</li>
+          <li class="showAllBtn bodyMediumReguler">
+            All
+            <img class="icon" src="/assets/icon/arrow-right.png" alt=""/>
+          </li>
+        </ul>
+
+        <div class="group-action">
+          <div class="dropdown-group">
+            <div id="dropdownTime" class="dropdown">
+              <div class="select">
+                <p class="labelSelected bodySmallMedium">All Time</p>
+                <svg class="arrowIcon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5 7.5L10 12.5L15 7.5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <ul class="options">
+                <li class="option bodySmallMedium" data-option="now">
+                  <span>Now</span>
+                  <img src="/assets/icon/check.png" class="icon" alt=""/>
+                </li>
+                <li class="option bodySmallMedium" data-option="past-week">
+                  <span>This Past Week</span>
+                  <img src="/assets/icon/check.png" class="icon" alt=""/>
+                </li>
+                <li class="option bodySmallMedium" data-option="past-month">
+                  <span>This Past Month</span>
+                  <img src="/assets/icon/check.png" class="icon" alt=""/>
+                </li>
+                <li class="option bodySmallMedium" data-option="past-year">
+                  <span>This Past Year</span>
+                  <img src="/assets/icon/check.png" class="icon" alt=""/>
+                </li>
+                <li class="option bodySmallMedium active" data-option="all-time">
+                  <span>All Time</span>
+                  <img src="/assets/icon/check.png" class="icon" alt=""/>
+                </li>
+              </ul>
+            </div>
+
+            <div id="dropdownCategory" class="dropdown">
+              <div class="select">
+                <p class="labelSelected bodySmallMedium">Trending</p>
+                <svg class="arrowIcon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5 7.5L10 12.5L15 7.5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <ul class="options category">
+                <li class="option bodySmallMedium active" data-option="now">
+                  <span>Trending</span>
+                  <img src="/assets/icon/check.png" class="icon" alt=""/>
+                </li>
+                <li class="option bodySmallMedium" data-option="past-week">
+                  <span>Most Popular</span>
+                  <img src="/assets/icon/check.png" class="icon" alt=""/>
+                </li>
+              </ul>
+            </div>
+            
+          </div>
+
+          <div class="thumbnail">
+            <p class="bodySmallMedium title">Thumbnail size</p>
+            <div class="action">
+              <button class="button decreaseThumnailBtn">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4.16406 10H15.8307" stroke="#64748B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>                  
+              </button>
+              <span class="divider"></span>
+              <button class="button increaseThumnailBtn">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.9974 4.16699V15.8337M4.16406 10.0003H15.8307" stroke="#64748B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>                  
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div id="listMuseums" class="list-museums thumbnail-3" data-thumbnail-size="3">
+          <!-- Museum Item -->
+        </div>
+
+        <div class="containerDataNotFound">
+          <p class="textDataNotFound bodyLargeBold">Data museum not found.</p>
+        </div>
+
+        <button class="loadMoreMuseumBtn">
+          <p class="bodyMediumMedium">Load more museum</p>
+        </button>
+      </div>
+    </section>
+  </main>
+  
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="navigation__app">
+          <span class="app__logo"></span>
+          <p class="app__text bodyLargeBold">Virtualion</p>
+        </div>
+        <ul class="list">
+          <li class="bodySmallMedium item">Menu 1</li>
+          <li class="bodySmallMedium item">Menu 2</li>
+          <li class="bodySmallMedium item">Menu 3</li>
+          <li class="bodySmallMedium item">Menu 4</li>
+          <li class="bodySmallMedium item">Menu 5</li>
+          <li class="bodySmallMedium item">Menu 6</li>
+        </ul>
+        <div class="social-media">
+          <a href="#" class="link">
+            <img src="/assets/icon/twitter.png" class="img" alt=""/>
+          </a>
+          <a href="#" class="link">
+            <img src="/assets/icon/facebook.png" class="img" alt=""/>
+          </a>
+          <a href="#" class="link">
+            <img src="/assets/icon/instagram.png" class="img" alt=""/>
+          </a>
+          <a href="#" class="link">
+            <img src="/assets/icon/pinterest.png" class="img" alt=""/>
+          </a>
+        </div>
+      </div>
+      <ul class="footer__bottom">
+        <li class="bodySmallReguler item">© 2023 Virtualion.</li>
+        <li class="bodySmallReguler item">Terms</li>
+        <li class="bodySmallReguler item">Privacy</li>
+        <li class="bodySmallReguler item">Cookies</li>
+      </ul>
+    </div>
+  </footer>
+  
+</body>
+</html>
