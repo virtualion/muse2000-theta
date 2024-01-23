@@ -15,7 +15,7 @@ body {
 
     #unity-container.unity-desktop {
             position: absolute;
-        background: #ffffff;
+        background: #DDDDDD;
 	width: 94vw;/*min(80vw, 160vh); 【重要】画面の幅！*/
 	//border: solid;
 	height: 90vh;
@@ -29,7 +29,7 @@ body {
             position: absolute;
         width: 100vw;
         height: 100vh;
-        background: #ffffff;
+        background: #DDDDDD;
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%)
@@ -37,7 +37,7 @@ body {
     }
 
 #unity-canvas {
-    background: #ffffff;
+    background: #FFFFFF;
     border-radius: 30px 30px 30px 30px;
 
 }
@@ -90,7 +90,7 @@ body {
 #unity-footer {
     position: relative;
     height: 38px;
-    background-color: #ffffff;
+    background-color: #EEEEEE;
 }
 
 .unity-mobile #unity-footer {

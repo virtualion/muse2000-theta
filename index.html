@@ -13,40 +13,10 @@
   />
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-  <!--<script type="module" src="assets/js/index.js"></script>-->
+  <script type="module" src="assets/js/index.js"></script>
   
   
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script>
-  var windowWidth = $(window).width();
-  var windowSm = 768;
-  if (windowWidth <= windowSm) {
-    $(function () {
-          var src = $("<script>").attr({
-                      "type": "text/javascript",
-                      "src":  "assets/js/index2.js"
-
-                  });
-        //スクリプト追加
-        $("head").append(src);
-    });
-  
-  } else {
-    $(function () {
-          var src = $("<script>").attr({
-                      "type": "text/javascript",
-                      "src":  "assets/js/index.js"
-
-                  });
-        //スクリプト追加
-        $("head").append(src);
-    });
-  }
-  
-  </script>
-  
-  
-  
+    
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-SV7GXP00KB"></script>
 <script>
@@ -68,8 +38,7 @@ cookieconsent.run({"notice_banner_type":"simple","consent_type":"implied","palet
 </script>
 
 
-  
-  
+
 </head>
 <body>
   <nav class="navigation">
@@ -80,9 +49,19 @@ cookieconsent.run({"notice_banner_type":"simple","consent_type":"implied","palet
       <button class="closeNavigationBtn hide">
         <img class="img" src="assets/icon/close-icon.png"/>
       </button>
-      <div class="navigation__app">
-        <span class="app__logo"></span>
-        <p class="app__text bodyMediumMedium bodyLargeBold-md">Virtualion</p>
+      <div class="app-action-container">
+        <a href="/" class="navigation__app">
+          <img class="app__logo" src="assets/img/app-logo.png">
+        </a>
+        <span class="app-action-divider"></span>
+        <div class="language-switcher">
+          <a href="?lang=en" data-lang="en" class="language-switcher-item bodySmallReguler">
+            <span>ENG</span>
+          </a>
+          <a href="?lang=jp" data-lang="jp" class="language-switcher-item bodySmallReguler">
+            <span>JPN</span>
+          </a>
+        </div>
       </div>
     </div>
     <ul class="navigation-group">
@@ -242,7 +221,7 @@ cookieconsent.run({"notice_banner_type":"simple","consent_type":"implied","palet
       <span class="v-divider"></span>
 
       <button class="subscribeBtn">
-        <a href="https://virtualion.co.jp"><span class="label bodySmallMedium">Find More</span></a>
+        <span class="label bodySmallMedium">Subscribe</span>
       </button>
     </div>
   </nav>
@@ -288,10 +267,10 @@ cookieconsent.run({"notice_banner_type":"simple","consent_type":"implied","palet
           <div class="contentHeader">
             <div class="contentTitleContainer">
               <p class="contentTitle bodyLargeBold">MORI Building Digital Art Museum</p>
-              <div class="contentTitle verified">
+              <!-- <div class="contentTitle verified">
                 <img class="contentTitle verifiedIcon" src="assets/icon/check-verified-icon.png" alt=""/>
                 <p class="contentTitle verifiedBy bodySmallMedium">Anderson</p>
-              </div>
+              </div> -->
             </div>
             <div class="statistic">
               <div class="item likeBtn">
@@ -306,6 +285,10 @@ cookieconsent.run({"notice_banner_type":"simple","consent_type":"implied","palet
                 <p class="captionReguler label view">3</p>
               </div>
             </div>
+          </div>
+          <div class="contentVerified">
+            <img class="verifiedIcon" src="assets/icon/check-verified-icon.png" alt=""/>
+            <p class="verifiedBy bodySmallMedium">Anderson</p>
           </div>
           <div class="contentCreatorContainer">
             <p class="creatorValue bodySmallReguler">Jack Mackinnon</p>
@@ -334,8 +317,8 @@ cookieconsent.run({"notice_banner_type":"simple","consent_type":"implied","palet
     <section class="hero">
       <div class="hero__container">
         <div class="information-container">
-          <h1 class="title heading-4 heading-3-md">世界のすべてを<br>　ミュージアムに。</h1>
-          <p class="description bodySmallReguler bodyMediumReguler-md">知への没入へようこそ。ここには、幾千ものミュージアムがあります。あなたは自由に参加できます。現在の館数: 100,663</p>
+          <h1 data-element="titlePage" class="title heading-4 heading-3-md"></h1>
+          <p class="description bodySmallReguler bodyMediumReguler-md"><span data-element="descriptionPage"></span> <span data-element="museums-number"></span></p>
         </div>
 
         <!-- Search Input -->
@@ -388,14 +371,15 @@ cookieconsent.run({"notice_banner_type":"simple","consent_type":"implied","palet
     <section class="content">
       <div class="container">
         <ul class="filters-category">
-          <li class="filter-item bodySmallMedium" data-filter="art">Art</li>
+          <li class="filter-item bodySmallMedium" data-filter="template">Template</li>
+          <!-- <li class="filter-item bodySmallMedium" data-filter="art">Art</li>
           <li class="filter-item bodySmallMedium" data-filter="city">City</li>
           <li class="filter-item bodySmallMedium" data-filter="culture">Culture</li>
           <li class="filter-item bodySmallMedium" data-filter="geography">Geography</li>
           <li class="filter-item bodySmallMedium" data-filter="person">Person</li>
           <li class="filter-item bodySmallMedium" data-filter="science">Science</li>
           <li class="filter-item bodySmallMedium" data-filter="social">Social</li>
-          <li class="filter-item bodySmallMedium" data-filter="technology">Technology</li>
+          <li class="filter-item bodySmallMedium" data-filter="technology">Technology</li> -->
           <li class="showAllBtn bodyMediumReguler">
             All
             <img class="icon" src="assets/icon/arrow-right.png" alt=""/>
@@ -404,38 +388,26 @@ cookieconsent.run({"notice_banner_type":"simple","consent_type":"implied","palet
 
         <div class="group-action">
           <div class="dropdown-group">
-            <div id="dropdownTime" class="dropdown">
+            <div id="dropdownTime" class="dropdown" data-option-selected="latest">
               <div class="select">
-                <p class="labelSelected bodySmallMedium">All Time</p>
+                <p class="labelSelected bodySmallMedium">Latest Data</p>
                 <svg class="arrowIcon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M5 7.5L10 12.5L15 7.5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </div>
               <ul class="options">
-                <li class="option bodySmallMedium" data-option="now">
-                  <span>Now</span>
+                <li class="option bodySmallMedium active" data-option="latest">
+                  <span>Latest Data</span>
                   <img src="assets/icon/check.png" class="icon" alt=""/>
                 </li>
-                <li class="option bodySmallMedium" data-option="past-week">
-                  <span>This Past Week</span>
-                  <img src="assets/icon/check.png" class="icon" alt=""/>
-                </li>
-                <li class="option bodySmallMedium" data-option="past-month">
-                  <span>This Past Month</span>
-                  <img src="assets/icon/check.png" class="icon" alt=""/>
-                </li>
-                <li class="option bodySmallMedium" data-option="past-year">
-                  <span>This Past Year</span>
-                  <img src="assets/icon/check.png" class="icon" alt=""/>
-                </li>
-                <li class="option bodySmallMedium active" data-option="all-time">
-                  <span>All Time</span>
+                <li class="option bodySmallMedium" data-option="old">
+                  <span>Old Data</span>
                   <img src="assets/icon/check.png" class="icon" alt=""/>
                 </li>
               </ul>
             </div>
 
-            <div id="dropdownCategory" class="dropdown">
+            <div id="dropdownCategory" class="dropdown" data-option-selected="most-popular">
               <div class="select">
                 <p class="labelSelected bodySmallMedium">Trending</p>
                 <svg class="arrowIcon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -443,11 +415,11 @@ cookieconsent.run({"notice_banner_type":"simple","consent_type":"implied","palet
                 </svg>
               </div>
               <ul class="options category">
-                <li class="option bodySmallMedium active" data-option="now">
+                <li class="option bodySmallMedium active" data-option="trending">
                   <span>Trending</span>
                   <img src="assets/icon/check.png" class="icon" alt=""/>
                 </li>
-                <li class="option bodySmallMedium" data-option="past-week">
+                <li class="option bodySmallMedium" data-option="most-popular">
                   <span>Most Popular</span>
                   <img src="assets/icon/check.png" class="icon" alt=""/>
                 </li>

@@ -1,4 +1,28 @@
 const body = document.body;
+// let params = (new URL(document.location)).searchParams;
+// let lang =  params.get('lang')?.toUpperCase() ?? 'EN';
+
+const langDataSwitcher = (dataEN, dataJP) => {
+  const htmlLang = document.querySelector('html').getAttribute('lang')
+  if(htmlLang === 'en'){
+    document.querySelector('[data-lang="jp"]').classList.remove('active')
+    document.querySelector('[data-lang="en"]').classList.add('active')
+    return dataEN
+  } else if(htmlLang === 'jp'){
+    document.querySelector('[data-lang="en"]').classList.remove('active')
+    document.querySelector('[data-lang="jp"]').classList.add('active')
+    return dataJP
+  }
+}
+
+document.querySelector('.language-switcher-item[data-lang="en"]').addEventListener('click', () => {
+  document.querySelector('html').setAttribute('lang', 'en')
+  loadInformationDetail()
+})
+document.querySelector('.language-switcher-item[data-lang="jp"]').addEventListener('click', () => {
+  document.querySelector('html').setAttribute('lang', 'jp')
+  loadInformationDetail()
+})
 
 // Open Drawer Share
 const shareBtn = document.querySelector('.shareBtn')
@@ -141,9 +165,10 @@ body.addEventListener('click', () => {
 
 
 // Append Data To Detail Information Virtualion
-window.onload = () => {
-  const searchParams = new URLSearchParams(window.location.search);
-  const dataIndex = searchParams.get('path').split('/').slice(-1)[0].split('.')[0]
+window.onload = loadInformationDetail
+function loadInformationDetail () {
+  const location = (new URL(document.location));
+  const searchLocation = location.search
 
   const contentTitle = document.querySelector('.informationDetailContainer .informationTitle')
   const contentDescription = document.querySelector('.informationDetailContainer .informationDescription')
@@ -156,9 +181,9 @@ window.onload = () => {
   fetch('data.json')
     .then(response => response.json())
     .then(data => {
-      const selectedData = data.filter(item => item.id === dataIndex)[0]
-      contentTitle.textContent = selectedData.title
-      contentDescription.textContent = selectedData.description
+      const selectedData = data.filter(item => item.link.includes(searchLocation))[0]
+      contentTitle.textContent = langDataSwitcher(selectedData.title, selectedData.title_ja)
+      contentDescription.textContent = langDataSwitcher(selectedData.description, selectedData.description_ja)
       creatorValue.textContent = selectedData.creator
       contentLike.textContent = selectedData.like
       contentView.textContent = selectedData.view
@@ -167,6 +192,7 @@ window.onload = () => {
     })
     .catch(error => console.log(error));
 }
+loadInformationDetail()
 
 // Copy Link 
 const copyLinkButton = document.querySelector('.share-item-link.copyLink')

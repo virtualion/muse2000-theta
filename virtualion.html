@@ -19,6 +19,18 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <!-- <script type="module" src="assets/js/index.js"></script>  -->
   <script type="module" src="assets/js/virtualion.js"></script>
+  
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SV7GXP00KB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SV7GXP00KB');
+</script>
+
+
 </head>
 <body>
   <nav class="navigation">
@@ -29,9 +41,19 @@
       <button class="closeNavigationBtn hide">
         <img class="img" src="assets/icon/close-icon.png"/>
       </button>
-      <div class="navigation__app">
-        <span class="app__logo"></span>
-        <p class="app__text bodyMediumMedium bodyLargeBold-md">Virtualion</p>
+      <div class="app-action-container">
+        <a href="/" class="navigation__app">
+          <img class="app__logo" src="assets/img/app-logo.png">
+        </a>
+        <span class="app-action-divider"></span>
+        <div class="language-switcher">
+          <btn data-lang="en" class="language-switcher-item bodySmallReguler">
+            <span>ENG</span>
+          </btn>
+          <btn data-lang="jp" class="language-switcher-item bodySmallReguler">
+            <span>JPN</span>
+          </btn>
+        </div>
       </div>
     </div>
     
@@ -305,7 +327,8 @@
   
   
   <script>
-      var buildUrl = "Build";
+      const isMobile = window.matchMedia("(max-width: 576px)")
+      var buildUrl = isMobile ? "Build_Mob" : "Build";
       var loaderUrl = buildUrl + "/Basen.loader.js";
       var config = {
         dataUrl: buildUrl + "/Basen.data.unityweb",

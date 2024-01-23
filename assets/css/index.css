@@ -91,6 +91,27 @@ body {
   width: 100%;
 }
 
+.language-switcher {
+  display: none;
+  align-items: center;
+  gap: 8px;
+}
+
+.language-switcher-item {
+  cursor: pointer;
+  color: #94A3B8;
+  text-decoration: none;
+}
+.language-switcher-item.active {
+  color: #1C1D22;
+}
+
+.app-action-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
 .navigation__app {
   cursor: pointer;
   display: flex;
@@ -99,10 +120,8 @@ body {
 }
 
 .navigation__app .app__logo {
-  background: var(--black-100);
-  width: 20px;
+  width: 99px;
   height: 20px;
-  border-radius: 6px;
 }
 
 .navigation__app .app__text {
@@ -155,6 +174,16 @@ body {
   .navigation-group .list-item {
     color: var(--black-70);
     cursor: pointer;
+  }
+
+  .language-switcher {
+    display: flex;
+  }
+
+  .app-action-divider {
+    width: 1px;
+    height: 24px;
+    background: #F1F5F9;
   }
 
   .buttonGroup {
@@ -445,7 +474,7 @@ body {
   }
 
   .navigation__app .app__logo {
-    width: 24px;
+    width: 118px;
     height: 24px;
   }
 }
@@ -648,19 +677,21 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 20px;
 }
 .featured-item .information .title {
   cursor: pointer;
   color: black;
   text-decoration: none;
-  display: -webkit-box;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;  
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .featured-item .information .titleContainer {
   display: flex;
   align-items: center;
   gap: 4px;
+  overflow: hidden;
 }
 .featured-item .information .titleContainer .verifiedContainer {
   width: 16px;
@@ -983,6 +1014,9 @@ body {
   margin-bottom: 56px;
 }
 
+.museum-item {
+  overflow: hidden;
+}
 .museum-item .img {
   cursor: pointer;
   margin-bottom: 8px;
@@ -992,20 +1026,22 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 20px;
+  overflow: hidden;
 }
 .museum-item .information .title {
   cursor: pointer;
   color: black;
   text-decoration: none;
-  display: -webkit-box;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;  
+  white-space: nowrap;
   overflow: hidden;
+  text-overflow: ellipsis;
 }
 .museum-item .information .titleContainer {
   display: flex;
   align-items: center;
   gap: 4px;
+  overflow: hidden;
 }
 .museum-item .information .titleContainer .verifiedContainer {
   width: 16px;
@@ -1527,10 +1563,11 @@ body {
 
 .modalPreviewVirtualion .modalInnerContainer .contentContainer .contentHeader {
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   gap: 12px;
+  align-items: start;
   justify-content: space-between;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 }
 
 .modalPreviewVirtualion .modalInnerContainer .contentContainer .contentHeader .contentTitleContainer {
@@ -1559,6 +1596,7 @@ body {
   display: flex;
   align-items: center;
   gap: 8px;
+  padding: 10px 0;
 }
 .modalPreviewVirtualion .modalInnerContainer .contentContainer .contentHeader .statistic .item {
   display: flex;
@@ -1582,6 +1620,20 @@ body {
 }
 .modalPreviewVirtualion .modalInnerContainer .contentContainer .contentHeader .statistic .item .label {
   color: var(--black-100);
+}
+
+.modalPreviewVirtualion .modalInnerContainer .contentContainer .contentVerified {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+.modalPreviewVirtualion .modalInnerContainer .contentContainer .contentVerified .verifiedIcon {
+  width: 20px;
+  height: 20px;
+}
+.modalPreviewVirtualion .modalInnerContainer .contentContainer .contentVerified .verifiedBy {
+  color: #475569;
 }
 
 .modalPreviewVirtualion .modalInnerContainer .contentContainer .contentCreatorContainer {
