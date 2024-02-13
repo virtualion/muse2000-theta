@@ -576,8 +576,34 @@ function modalPreviewVirtualion() {
   const contentLike = document.querySelector('.modalInnerContainer .statistic .label.like')
   const contentView = document.querySelector('.modalInnerContainer .statistic .label.view')
   const isVerified = document.querySelector('.modalInnerContainer .contentVerified')
+  const labelAvailibilityEl = document.querySelector('.modalInnerContainer .labelAvailibility')
   const verifiedBy = document.querySelector('.modalInnerContainer .contentVerified .verifiedBy')
   const getStartedButton = document.querySelector('.modalInnerContainer .getStartedButton')
+
+  if(url.searchParams.get('id')){
+    console.log(url.searchParams.get('id'))
+
+    fetch('data.json')
+      .then(response => response.json())
+      .then(data => {
+        const selectedData = data.filter(item => item.id === url.searchParams.get('id'))[0]
+        contentImage.setAttribute('src', selectedData.thumbnail)
+        contentTitle.textContent = langDataSwitcher(selectedData.title, selectedData.title_ja)
+        contentDescription.textContent = langDataSwitcher(selectedData.description, selectedData.description_ja)
+        creatorValue.textContent = selectedData.creator
+        contentLike.textContent = selectedData.like
+        contentView.textContent = selectedData.view
+        verifiedBy.textContent = selectedData.verifiedBy
+        selectedData.verified ? isVerified.style.display = 'flex' : isVerified.style.display = 'none'
+        selectedData.mob ? labelAvailibilityEl.style.display = 'none' : labelAvailibilityEl.style.display = 'flex'
+        getStartedButton.setAttribute('href', selectedData.link)
+      })
+      .catch(error => console.log(error));
+
+    modalPreviewVirtualion.classList.add('show');
+    modalPreviewVirtualion.classList.remove("hide");
+    body.style.overflowY = 'hidden';
+  }
 
   musuemItems.forEach(el => {
     el.addEventListener("click", (e) => {
@@ -598,6 +624,7 @@ function modalPreviewVirtualion() {
           contentView.textContent = selectedData.view
           verifiedBy.textContent = selectedData.verifiedBy
           selectedData.verified ? isVerified.style.display = 'flex' : isVerified.style.display = 'none'
+          selectedData.mob ? labelAvailibilityEl.style.display = 'none' : labelAvailibilityEl.style.display = 'flex'
           getStartedButton.setAttribute('href', selectedData.link)
         })
         .catch(error => console.log(error));
@@ -627,6 +654,7 @@ function modalPreviewVirtualion() {
           contentView.textContent = selectedData.view
           verifiedBy.textContent = selectedData.verifiedBy
           selectedData.verified ? isVerified.style.display = 'flex' : isVerified.style.display = 'none'
+          selectedData.mob ? labelAvailibilityEl.style.display = 'none' : labelAvailibilityEl.style.display = 'flex'
           getStartedButton.setAttribute('href', selectedData.link)
         })
         .catch(error => console.log(error));

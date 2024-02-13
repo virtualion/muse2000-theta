@@ -28,12 +28,12 @@ document.querySelector('.language-switcher-item[data-lang="jp"]').addEventListen
 const shareBtn = document.querySelector('.shareBtn')
 const shareContainer = document.querySelector('.shareContainer')
 const shareDrawer = document.querySelector('.shareDrawer')
-shareBtn.addEventListener('click', (e) => {
+shareBtn?.addEventListener('click', (e) => {
   e.stopPropagation()
   shareContainer.classList.toggle('opened');
 })
 
-shareDrawer.addEventListener('click', (e) => {
+shareDrawer?.addEventListener('click', (e) => {
   e.stopPropagation();
 })
 

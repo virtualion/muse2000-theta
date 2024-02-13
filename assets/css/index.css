@@ -1706,6 +1706,6 @@ body {
     padding: 88px 180px;
   }
   .modalPreviewVirtualion .modalInnerContainer .footerContainer .labelAvailibility {
-    display: flex;
+    display: none;
   }
 }

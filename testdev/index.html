@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ja"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>いいねボタン改　デモページ</title>
+    <link href="index_files/icon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://nftmuseum.coresv.com/newiine_app/newiine.css">
+
+    <style>
+
+     body {
+      font-family: 'メイリオ', Meiryo,'ヒラギノ角ゴシック','Hiragino Sans','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',sans-serif;
+       background: #ebebeb;
+       margin: 0;
+       padding: 0;
+       font-size: 16px;
+     }
+
+     #container {
+       background: white;
+       width: 96%;
+       max-width: 600px;
+       margin: 100px auto;
+       padding: 40px 15px;
+     }
+
+     a {
+       color: deeppink;
+     }
+
+     ul li {
+       margin-bottom: 10px;
+     }
+
+     code {
+        display: inline;
+        background: #efefef;
+        border: 1px solid #d0d0d0;
+        font-size: 12px;
+        word-break: break-all;
+        padding: 2px 2px;
+        border-radius: 2px;
+      }
+
+      p, ul {
+        margin-bottom: 30px;
+      }
+
+    </style>
+  </head>
+  <body>
+
+<div id="container">
+
+  <h1>いいねボタン改　デモページ</h1>
+
+  <p>いいねボタン改のデモです。</p>
+
+<!-- いいねボタン改ここから -->
+  <button type="submit" class="newiine_btn newiine_type01 newiine_clickedtoday" data-iinename="000-sample1">
+    <span class="material-icons-round">favorite</span>
+    <span class="newiine_count">14559</span>いいね
+
+    <!-- お礼メッセージここから -->
+   <div class="newiine_thanks newiine_thanks_up" style="display:none;">
+     <div class="newiine_box">
+       <img src="index_files/example.jpg" alt="THANK YOU!">
+     <p>ありがとうございます！</p>
+     </div>
+   </div>
+   <!-- お礼メッセージここまで -->
+
+  </button>
+<!-- いいねボタン改ここまで -->
+
+    <p>↑これが最もスタンダードないいねボタンです。お好みに合わせてハートマークを消したり、「いいね」の文字を消したり、カウント数だけを消したりすることができます。また、「いいね」の文字をお好みの文言に変更することもできます。</p>
+
+    <p>お礼メッセージを出さないようにしたり、いいねボタンの上側にポップアップさせることもできます。以下のふたつのボタンではお礼メッセージが表示されません。</p>
+
+    <p>
+        <!-- いいねボタン改ここから -->
+        <button type="submit" class="newiine_btn newiine_type01 newiine_clickedtoday" data-iinename="000-sample1">
+          <span class="material-icons-round">favorite</span>
+            <span class="newiine_count">14559</span>
+          </button>
+        <!-- いいねボタン改ここまで -->
+        <!-- いいねボタン改ここから -->
+          <button type="submit" class="newiine_btn newiine_type01 newiine_clickedtoday" data-iinename="000-sample1">
+            <span class="material-icons-round">favorite</span>
+            いいね
+            </button>
+        <!-- いいねボタン改ここまで --></p>
+
+    <p>
+      ここまでの３つのボタンは、すべて同じいいねボタンとしてカウント数を共有しています。どれかひとつのボタンをクリックすると、すべてのボタンの色が変わるのがわかります。
+    </p>
+
+    
+    <p>
+      また、お礼メッセージを複数用意して、メッセージがポップアップするごとにランダムで切り替えることもできます（いいねボタンをクリックするごとではなく、ポップアップごとです）。
+    </p>
+    
+    <p>
+
+      <!-- いいねボタン改ここから -->
+  <button type="submit" class="newiine_btn newiine_type01" data-iinename="000-random" data-iinecountlimit="15">
+    <span class="material-icons-round">favorite</span>
+    <span class="newiine_count">5177</span>いいね
+
+    <!-- お礼メッセージここから -->
+   <div class="newiine_thanks newiine_thanks_down" style="display:none;">
+    <div class="newiine_box">
+      <p>お礼メッセージ１です</p>
+    </div>
+    <div class="newiine_box">
+      <p>お礼メッセージ２です</p>
+    </div>
+    <div class="newiine_box">
+      <p>お礼メッセージ３です</p>
+    </div>
+    <div class="newiine_box">
+      <p>お礼メッセージ４です</p>
+    </div>
+    <div class="newiine_box">
+      <p>お礼メッセージ５です</p>
+    </div>
+    <div class="newiine_box">
+      <p>お礼メッセージ６です</p>
+    </div>
+    <div class="newiine_box">
+      <p>お礼メッセージ７です</p>
+    </div>
+    <div class="newiine_box">
+      <p>お礼メッセージ８です</p>
+    </div>
+    <div class="newiine_box">
+      <p>お礼メッセージ９です</p>
+    </div>
+    <div class="newiine_box">
+      <p>お礼メッセージ１０です</p>
+    </div>
+   </div>
+   <!-- お礼メッセージここまで -->
+
+  </button>
+<!-- いいねボタン改ここまで -->
+      </p>
+
+
+    <p>いいねボタンの区別には、<code>data-iinename属性</code>を利用しています。data-iinename属性が同じいいねボタンはカウント数を共有し、data-iinename属性が異なるいいねボタンは別のボタンとしてカウント数が独立します。
+    </p>
+
+    <p>
+      例えば、作品を展示するページの最後に、data-iinename属性が異なるいいねボタンを複数設置することで、作品に対する簡易感想アンケートを設けることができます。
+    </p>
+      
+    <p>
+      <!-- いいねボタン改ここから -->
+       <button type="submit" class="newiine_btn" data-iinename="101-1-泣けました" data-iinecountlimit="15">
+         泣けました！ <span class="newiine_count">4619</span>
+
+         <!-- お礼メッセージここから -->
+        <div class="newiine_thanks newiine_thanks_down" style="display:none;">
+          <div class="newiine_box">
+          <p>ご投票ありがとうございました！</p>
+          </div>
+        </div>
+        <!-- お礼メッセージここまで -->
+        </button>
+    <!-- いいねボタン改ここまで -->
+    
+      <!-- いいねボタン改ここから -->
+       <button type="submit" class="newiine_btn" data-iinename="101-2-笑えました">笑えました！ <span class="newiine_count">4027</span>
+
+        <!-- お礼メッセージここから -->
+       <div class="newiine_thanks newiine_thanks_down" style="display:none;">
+         <div class="newiine_box">
+         <p>笑っていただけて嬉しいです！</p>
+         </div>
+       </div>
+       <!-- お礼メッセージここまで -->
+      </button>
+    <!-- いいねボタン改ここまで -->
+
+      <!-- いいねボタン改ここから -->
+       <button type="submit" class="newiine_btn" data-iinename="101-3-驚きました">驚きました！ <span class="newiine_count">3768</span>
+
+        <!-- お礼メッセージここから -->
+       <div class="newiine_thanks newiine_thanks_down" style="display:none;">
+         <div class="newiine_box">
+         <p>結果を楽しみにお待ちください！</p>
+         </div>
+       </div>
+       <!-- お礼メッセージここまで -->
+      </button>
+    <!-- いいねボタン改ここまで -->
+
+    </p>
+
+    <p>
+      button属性に<code>newiine_type02</code>クラスを追加すると丸型のいいねボタンになります。
+    </p>
+    
+    <p>
+<!-- いいねボタン改ここから -->
+<button type="submit" class="newiine_btn newiine_type02" data-iinename="ハートのみ丸ボタン"><span class="material-icons-round">favorite</span><span class="newiine_count">3226</span>
+
+  <!-- お礼メッセージここから -->
+  <div class="newiine_thanks newiine_thanks_down" style="display:none;">
+    <div class="newiine_box">
+    <p>ありがとうございます！<br>励みになります！</p>
+    </div>
+  </div>
+  <!-- お礼メッセージここまで -->
+</button>
+<!-- いいねボタン改ここまで -->
+    </p>
+
+    <p>管理画面は<a href="https://nftmuseum.coresv.com/newiine_app/admin/">こちら</a>。パスワード「pass」でログインできます。</p>
+  
+  <ul>
+    <li>１ページに複数個のボタンを設置できる</li>
+    <li>ボタンは連打することができる</li>
+    <li>１人が１日にいいねできる回数制限を設けられる（デモでは１日10回）</li>
+    <li>ボタンはdata-iinename属性で指定した名前で区別される</li>
+    <li>同じ名前のボタンを１ページに複数個表示することができ、ひとつのボタンがクリックされると他の同じ名前のボタンのカウント数も更新される</li>
+    <li>総いいね数はボタン横に表示することもできるし、非表示にもできる</li>
+    <li>いたずら防止のため、IPアドレスを使ったいいね数ブロックもできる</li>
+    <li>管理画面があり、すべてのいいねボタンのいいね数を一覧で見ることができる</li>
+  </ul>
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://nftmuseum.coresv.com/newiine_app/newiine.js"></script>
+  
+
+</body></html>
