@@ -17,8 +17,8 @@ const langDataSwitcher = (dataEN, dataJP) => {
 
 const titlePageEl = document.querySelector('[data-element="titlePage"]')
 const titleDescriptionEl = document.querySelector('[data-element="descriptionPage"]')
-titlePageEl.innerHTML = langDataSwitcher('Curator\'s Idea Book.', 'キュレーターの<br>　アイデアノート')
-titleDescriptionEl.innerHTML = langDataSwitcher('Here is an book exhibition ideas that has yet to be seen. Current Number of Museums:', 'まだ見ぬ展示がここにある。このページでは、バーチャリオンとその関係者たちによる、「やってみたい企画展」のアイデアを収集しています。私たちは、このアイデアを「バーチャル」の力で具現化します。<br>現在のアイデア数:')
+titlePageEl.innerHTML = langDataSwitcher('ODA <br>Virtual Museum', '大田市<br>　バーチャルミュージアム')
+titleDescriptionEl.innerHTML = langDataSwitcher('Here is an book exhibition ideas that has yet to be seen. Current Number of Museums:', '島根県大田市の歴史・自然・文化資源の価値を伝える、バーチャルミュージアムの集積プラットフォーム。<br>現在の企画数：')
 
 const featuredMuseums = document.getElementById('listFeaturedMuseum')
 const attachFeaturedMuseum = ({id, thumbnail, category, title, title_ja, like, liked, view, verified, link}) => {
