@@ -19,6 +19,17 @@
   line-height: 40px; /* 125% */
 }
 
+.heading-5 {
+  font-feature-settings: 'clig' off, 'liga' off;
+  /* Header/H5 */
+  font-family: 'Roobert', sans-serif;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 38px;
+  /* or 136% */
+}
+
 .heading-6 {
   font-feature-settings: 'clig' off, 'liga' off;
   /* Header/H6 */
@@ -110,6 +121,17 @@
     font-style: normal;
     font-weight: 500;
     line-height: 40px; /* 125% */
+  }
+
+  .heading-5-md {
+    font-feature-settings: 'clig' off, 'liga' off;
+    /* Header/H5 */
+    font-family: 'Roobert', sans-serif;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 38px;
+    /* or 136% */
   }
 
   .heading-6-md {
@@ -204,6 +226,17 @@
     font-style: normal;
     font-weight: 500;
     line-height: 40px; /* 125% */
+  }
+
+  .heading-5-lg {
+    font-feature-settings: 'clig' off, 'liga' off;
+    /* Header/H5 */
+    font-family: 'Roobert', sans-serif;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 38px;
+    /* or 136% */
   }
 
   .heading-6-lg {

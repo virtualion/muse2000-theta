@@ -24,7 +24,7 @@ const featuredMuseums = document.getElementById('listFeaturedMuseum')
 const attachFeaturedMuseum = ({id, thumbnail, category, title, title_ja, like, liked, view, verified, link}) => {
   featuredMuseums.innerHTML += `
     <div class="swiper-slide featured-item" data-index="${id}">
-      <img src="${thumbnail}" class="img" alt=""/>
+      <img src="${thumbnail}" loading="lazy" class="img lazyload" alt=""/>
       
       <div class="information">
         <div class="titleContainer">
@@ -61,7 +61,7 @@ const attachMuseum = ({id, thumbnail, category, title, title_ja, like, liked, vi
 
   divEl.innerHTML = `
     <div class="" data-index="${id}" data-filter="${category}">
-      <img src="${thumbnail}" class="img" alt=""/>
+      <img src="${thumbnail}" loading="lazy" class="img lazyload" alt=""/>
 
       <div class="information">
         <div class="titleContainer">
@@ -95,17 +95,18 @@ const isMobile = window.matchMedia("(max-width: 576px)")
 const museumNumbersEl = document.querySelector('[data-element="museums-number"]')
 const numberOfDataLoadMore = 12
 
-fetch('data.json') // ADD modalPreviewVirtualion()
+fetch('data.json', { cache : 'force-cache' }) // ADD modalPreviewVirtualion()
   .then(response => response.json())
   .then(results => {
     let dataLength;
+    const _idMuseums = idMuseums ? idMuseums?.split('|') : undefined
     if (isMobile.matches) { // If media query matches mobile
-      results.filter(item => item.mob).slice(0,12).map((data, index) => attachMuseum(data)) // All Museum Mobile
-      dataLength = results.filter(item => item.mob).length
+      results.filter(item => _idMuseums ? _idMuseums.includes(item.id) : true).filter(item => item.mob).slice(0,12).map((data, index) => attachMuseum(data)) // All Museum Mobile
+      dataLength = results.filter(item => _idMuseums ? _idMuseums.includes(item.id) : true).filter(item => item.mob).length
       museumNumbersEl.textContent = dataLength.toLocaleString()
     } else {
-      results.slice(0,12).map((data, index) => attachMuseum(data)) // All Museum Desktop
-      dataLength = results.length
+      results.filter(item => _idMuseums ? _idMuseums.includes(item.id) : true).slice(0,12).map((data, index) => attachMuseum(data)) // All Museum Desktop
+      dataLength = results.filter(item => _idMuseums ? _idMuseums.includes(item.id) : true).length
       museumNumbersEl.textContent = dataLength.toLocaleString()
     }
 
@@ -116,10 +117,9 @@ fetch('data.json') // ADD modalPreviewVirtualion()
     }
     results.filter(item => item.featured).map((data, index) => attachFeaturedMuseum(data)) // Featured Museum
 
-    // Open All Link Museum on Search Params
-    idMuseums?.split('|').forEach((idMuseum) => {
-      window.open(results.filter(item => item.id === idMuseum)[0].link, '_blank')
-    })
+    if(_idMuseums){
+      listMuseums.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
 
     // Running Search with Url Search Params
     if(searchUrl){
@@ -145,7 +145,7 @@ function searchMuseum() {
     url.searchParams.set('search', search_query);
     window.history.pushState(null, '', url.toString());
 
-    return fetch('data.json')
+    return fetch('data.json', { cache : 'force-cache' })
       .then(response => response.json())
       .then(data => {
         const dataLength = data.filter(value => value.title.toLocaleLowerCase().includes(search_query.toLocaleLowerCase())).length
@@ -255,7 +255,7 @@ function filterDataMuseum() {
 
         itemsToHide = [];
         itemsToShow = document.querySelectorAll('.list-museums [data-filter]');
-        fetch('data.json')
+        fetch('data.json', { cache : 'force-cache' })
           .then(response => response.json())
           .then(data => {
             if (isMobile.matches) { // If media query matches mobile
@@ -277,7 +277,7 @@ function filterDataMuseum() {
         })
 
         e.currentTarget.classList.add('selected')
-        fetch('data.json')
+        fetch('data.json', { cache : 'force-cache' })
           .then(response => response.json())
           .then(data => {
             if (isMobile.matches) { // If media query matches mobile
@@ -364,7 +364,7 @@ const selectOption = (dropdownId) => {
       dropdownEl.setAttribute('data-option-selected', event.currentTarget.getAttribute('data-option'))
 
       if(event.currentTarget.getAttribute('data-option') === 'latest'){
-          return fetch('data.json')
+          return fetch('data.json', { cache : 'force-cache' })
             .then(response => response.json())
             .then(data => {
                 data
@@ -377,7 +377,7 @@ const selectOption = (dropdownId) => {
             })
             .catch(error => console.log(error));
       }else if(event.currentTarget.getAttribute('data-option') === 'old') {
-        return fetch('data.json')
+        return fetch('data.json', { cache : 'force-cache' })
             .then(response => response.json())
             .then(data => {
                 data
@@ -583,7 +583,7 @@ function modalPreviewVirtualion() {
   if(url.searchParams.get('id')){
     console.log(url.searchParams.get('id'))
 
-    fetch('data.json')
+    fetch('data.json', { cache : 'force-cache' })
       .then(response => response.json())
       .then(data => {
         const selectedData = data.filter(item => item.id === url.searchParams.get('id'))[0]
@@ -612,7 +612,7 @@ function modalPreviewVirtualion() {
       url.searchParams.set('id', dataIndex);
       window.history.pushState(null, '', url.toString());
 
-      fetch('data.json')
+      fetch('data.json', { cache : 'force-cache' })
         .then(response => response.json())
         .then(data => {
           const selectedData = data.filter(item => item.id === dataIndex)[0]
@@ -642,7 +642,7 @@ function modalPreviewVirtualion() {
       url.searchParams.set('id', dataIndex);
       window.history.pushState(null, '', url.toString());
 
-      fetch('data.json')
+      fetch('data.json', { cache : 'force-cache' })
         .then(response => response.json())
         .then(data => {
           const selectedData = data.filter(item => item.id === dataIndex)[0]
@@ -690,7 +690,7 @@ loadMoreMuseumBtn.addEventListener('click', () => {
   const museumsItem = document.querySelectorAll('.list-museums .museum-item')
   // const thumbnailSize = parseInt(listMuseumClass.getAttribute('data-thumbnail-size'))  
   const numberOfDataLoadMore = 12
-  return fetch('data.json')
+  return fetch('data.json', { cache : 'force-cache' })
       .then(response => response.json())
       .then(data => {
         let search_query = document.getElementById("search-museum").value;
