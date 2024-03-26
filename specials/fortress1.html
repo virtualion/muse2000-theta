@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>小笠原利孝コレクション</title>
+    <link rel="shortcut icon" href="../TemplateData/favicon.ico">
+    <link rel="stylesheet" href="../TemplateData/style.css">
+    <link rel="stylesheet" href="../TemplateData/popup.css">
+  
+
+  <link rel="stylesheet" href="../assets/css/index.css">
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+  />
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <!-- <script type="module" src="assets/js/index.js"></script>  -->
+  <script type="module" src="../assets/js/virtualion.js"></script>
+</head>
+<body>
+  <nav class="navigation">
+    <div class="leftNavigation">
+      <button class="hamburgerBtn">
+        <img class="img" src="../assets/icon/hamburger-icon.png"/>
+      </button>
+      <button class="closeNavigationBtn hide">
+        <img class="img" src="../assets/icon/close-icon.png"/>
+      </button>
+      <div class="app-action-container">
+        <a href="/" class="navigation__app">
+          <img class="app__logo" src="../assets/img/app-logo.png">
+        </a>
+        <span class="app-action-divider"></span>
+        <div class="language-switcher">
+          <btn data-lang="en" class="language-switcher-item bodySmallReguler">
+            <span>ENG</span>
+          </btn>
+          <btn data-lang="jp" class="language-switcher-item bodySmallReguler">
+            <span>JPN</span>
+          </btn>
+        </div>
+      </div>
+    </div>
+    
+    <ul class="share-container">
+      <div class="shareCopyLinkContainer">
+        <a href="#" class="share-item-link copyLink">
+          <img class="icon-link" src="../assets/icon/copy-link-icon.png" alt="" />
+        </a>
+        <div class="containerLabelCopiedLink">
+          <p class="bodySmallMedium">Copied</p>
+        </div>
+      </div>
+      <a href="#" class="share-item-link pinterestLink">
+        <img class="icon-link" src="../assets/icon/pinterest-icon.png" alt="小笠原利孝コレクション 操作" />
+      </a>
+      <a href="#" class="share-item-link twitterLink">
+        <img class="icon-link" src="../assets/icon/twitter-icon.png" alt="小笠原利孝コレクション 操作" />
+      </a>
+      <a href="#" class="share-item-link facebookLink">
+        <img class="icon-link" src="../assets/icon/facebook-icon.png" alt="小笠原利孝コレクション 操作" />
+      </a>
+    </ul>
+
+    <div class="buttonGroup">
+      <!-- Button Tutorial -->
+      <div class="tutorialContainer">
+        <button class="tutorialBtn">
+          <svg class="icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8.33333 7.0852C8.48016 6.6678 8.76998 6.31584 9.15144 6.09165C9.53291 5.86745 9.98141 5.7855 10.4175 5.86031C10.8536 5.93511 11.2492 6.16184 11.5341 6.50034C11.8191 6.83884 11.975 7.26726 11.9744 7.70973C11.9744 8.9588 10.1008 9.58333 10.1008 9.58333M10.1249 12.0833H10.1333M8.25 16L9.46667 17.6222C9.6476 17.8635 9.73807 17.9841 9.84897 18.0272C9.94611 18.065 10.0539 18.065 10.151 18.0272C10.2619 17.9841 10.3524 17.8635 10.5333 17.6222L11.75 16C11.9943 15.6743 12.1164 15.5114 12.2654 15.3871C12.4641 15.2213 12.6986 15.104 12.9504 15.0446C13.1393 15 13.3429 15 13.75 15C14.9149 15 15.4973 15 15.9567 14.8097C16.5693 14.556 17.056 14.0693 17.3097 13.4567C17.5 12.9973 17.5 12.4149 17.5 11.25V6.5C17.5 5.09987 17.5 4.3998 17.2275 3.86502C16.9878 3.39462 16.6054 3.01217 16.135 2.77248C15.6002 2.5 14.9001 2.5 13.5 2.5H6.5C5.09987 2.5 4.3998 2.5 3.86502 2.77248C3.39462 3.01217 3.01217 3.39462 2.77248 3.86502C2.5 4.3998 2.5 5.09987 2.5 6.5V11.25C2.5 12.4149 2.5 12.9973 2.6903 13.4567C2.94404 14.0693 3.43072 14.556 4.04329 14.8097C4.50272 15 5.08515 15 6.25 15C6.65715 15 6.86072 15 7.04959 15.0446C7.30141 15.104 7.53593 15.2213 7.73458 15.3871C7.88357 15.5114 8.00571 15.6743 8.25 16Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>          
+        </button>
+
+        <div class="tutorialDrawer">
+          <div class="swiper-tutorial-virtualion">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide tutorialItem">
+                <div class="tutorialIllustration">
+                  <img class="img" src="../assets/img/tutorial/how-to-move-1.png" alt="小笠原利孝コレクション 操作"/>
+                </div>
+                <div class="tutorialInstructions">
+                  <p class="title heading-6">HOW TO MOVE <span class="bodyLargeBold">(<span>1</span>/2)</span></p>
+                  <ul class="instructions">
+                    <li class="bodyLargeBold">Right drag to move the viewpoint, wheel or pinch in/out to zoom in/out.</li>
+                    <li class="bodyLargeBold">Use the <span class="bold">WSAD</span> keys to move forward, backward, left, and right.</li>
+                    <li class="bodyLargeBold">Double click on walls or floors to move to the clicked point</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="swiper-slide tutorialItem">
+                <div class="tutorialIllustration">
+                  <img class="img" src="../assets/img/tutorial/how-to-move-2.png" alt="小笠原利孝コレクション 操作"/>
+                </div>
+                <div class="tutorialInstructions">
+                  <p class="title heading-6">HOW TO MOVE <span class="bodyLargeBold">(<span>2</span>/2)</span></p>
+                  <ul class="instructions">
+                    <li class="bodyLargeBold">Display switching (on/off) for controller of movement with mouse</li>
+                    <li class="bodyLargeBold">Move with mouse:Drag on the translucent panel on the translucent panel to move around.</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="swiper-slide tutorialItem">
+                <div class="tutorialIllustration">
+                  <img class="img" src="../assets/img/tutorial/how-to-show-caption.png" alt="小笠原利孝コレクション 操作"/>
+                </div>
+                <div class="tutorialInstructions">
+                  <p class="title heading-6">HOW TO SHOW CAPTION</p>
+                  <ul class="instructions">
+                    <li class="bodyLargeBold">Open caption panel with a button on the right-below, and then yellow markers show up (only if available).</li>
+                    <li class="bodyLargeBold">Click on the marker to display the caption in the lower left window. The caption content will appear in the lower left window.If there is a "FIND MORE" button, click it for more information.</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="swiper-slide tutorialItem">
+                <div class="tutorialIllustration">
+                  <img class="img" src="../assets/img/tutorial/how-to-control-audio.png" alt="小笠原利孝コレクション 操作"/>
+                </div>
+                <div class="tutorialInstructions">
+                  <p class="title heading-6">HOW TO CONTROL AUDIO</p>
+                  <ul class="instructions">
+                    <li class="bodyLargeBold">When you approach the video, the playback panel appears. The playback position can be adjusted with the seek bar. Volume can be adjusted with the bar on the right.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiperController">
+            <!-- Pagination -->
+            <div class="tutorialPagination">
+              <span class="paginationItem active"></span>
+              <span class="paginationItem"></span>
+              <span class="paginationItem"></span>
+              <span class="paginationItem"></span>
+            </div>
+
+            <!-- Navigation -->
+            <div class="tutorialNavigation">
+              <button class="navigationButton prevBtnTutorial disabled">
+                <svg class="arrowIcon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20 12H4M4 12L10 18M4 12L10 6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>                  
+              </button>
+              <button class="navigationButton nextBtnTutorial">
+                <svg class="arrowIcon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4 12H20M20 12L14 6M20 12L14 18" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>                  
+              </button>
+            </div>
+          </div>
+
+          <div class="borderBottomTutorial">
+            <div class="borderInner"></div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Button Share -->
+      
+
+      <span class="v-divider"></span>
+
+      <button class="subscribeBtn">
+        <span class="label bodySmallMedium">Subscribe</span>
+      </button>
+    </div>
+  </nav>
+  <div class="navigationDrawer">
+    <ul class="navigationGroup">
+      <li class="bodySmallReguler item">Home</li>
+      <li class="bodySmallReguler item">Our Curators</li>
+      <li class="bodySmallReguler item">About</li>
+      <li class="bodySmallReguler item">News</li>
+      <li class="bodySmallReguler item">Contact</li>
+    </ul>
+
+    <div class="groupButton">
+      <button>
+        <img src="../assets/icon/question-icon.png" class="img"/>
+      </button>
+      <button>
+        <img src="../assets/icon/share-icon.png" class="img"/>
+      </button>
+    </div>
+  </div>
+
+  <main>
+    <div class="virtualion-detail">
+
+    <div id="unity-container" class="unity-desktop">
+      <canvas id="unity-canvas"></canvas>
+      <div id="unity-logo"><img src="../TemplateData/unity-logo-light.gif" class="load_gif" alt="小笠原利孝コレクション展"></div>
+      <div id="unity-loading-bar">
+        <div id="unity-progress-bar-empty">
+          <div id="unity-progress-bar-full"></div>
+        </div>
+      </div>
+
+
+      <!--<div id="unity-footer">
+        <div id="unity-webgl-logo-back"></div>
+                <div id="unity-fullscreen-button"></div>
+                <div id="unity-build-title">Curated by <a href="https://virtualion.co.jp/index_en.html">Virtualion Inc.</a></div>
+        </div>
+      </div>-->
+      <button class="actionBtn fullscreenB" id="unity-fullscreen-button">
+        <img class="img" src="../assets/icon/maximize-icon.png" alt="小笠原利孝コレクション展"/>
+      </button>
+
+      
+      
+      
+    </div>
+
+
+
+    </div>
+  </main>
+  
+  
+  
+  
+  
+  <script>
+      const isMobile = window.matchMedia("(max-width: 576px)")
+      var buildUrl = isMobile.matches ? "https://muse2000-b.s3.ap-northeast-1.amazonaws.com/special-builds/Fortress/Basen/Build" : "https://muse2000-b.s3.ap-northeast-1.amazonaws.com/special-builds/Fortress/Basen/Build";
+      var loaderUrl = buildUrl + "/Basen.loader.js";
+      var config = {
+        dataUrl: buildUrl + "/Basen.data.unityweb",
+        frameworkUrl: buildUrl + "/Basen.framework.js.unityweb",
+        codeUrl: buildUrl + "/Basen.wasm.unityweb",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "ProjectVirtualion",
+        productName: "Virtualion",
+        productVersion: "1.1",
+      };
+
+      var container = document.querySelector("#unity-container");
+      var canvas = document.querySelector("#unity-canvas");
+      var loadingBar = document.querySelector("#unity-loading-bar");
+      var loadingWindow = document.querySelector("#unity-logo");
+      var progressBarFull = document.querySelector("#unity-progress-bar-full");
+      var fullscreenButton = document.querySelector("#unity-fullscreen-button");
+      var mobileWarning = document.querySelector("#unity-mobile-warning");
+      var footer = document.querySelector("#unity-fullscreen-button");
+      let exp_full = document.getElementById('unity-fullscreen-button');
+      exp_full.style.display = "none";
+
+      // By default Unity keeps WebGL canvas render target size matched with
+      // the DOM size of the canvas element (scaled by window.devicePixelRatio)
+      // Set this to false if you want to decouple this synchronization from
+      // happening inside the engine, and you would instead like to size up
+      // the canvas DOM size and WebGL render target sizes yourself.
+      // config.matchWebGLToCanvasSize = false;
+
+      /*if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+        // container.className = "unity-mobile";
+        // Avoid draining fillrate performance on mobile devices,
+        // and default/override low DPI mode on mobile browsers.
+        config.devicePixelRatio = 1;
+        canvas.style.width = "900px";
+        canvas.style.height = "1700px";
+        footer.style.display = "none";
+        container.style.transform = "translate(-50%, -39%)";
+      } else {
+        canvas.style.width = "100%";
+        canvas.style.height = "100%";
+      }*/
+
+      canvas.style.width = "100%";
+      canvas.style.height = "100%";
+
+      canvas.style.background = "url('" + buildUrl + "/Basen.jpg') center / cover";
+      loadingBar.style.display = "block";
+
+      var script = document.createElement("script");
+      script.src = loaderUrl;
+      script.onload = () => {
+        createUnityInstance(canvas, config, (progress) => {
+          progressBarFull.style.width = 100 * progress + "%";
+        }).then((unityInstance) => {
+          loadingBar.style.display = "none";
+          loadingWindow.style.display = "none";
+          fullscreenButton.onclick = () => {
+            unityInstance.SetFullscreen(1);
+          };
+                    exp_full.style.display = "flex";
+        }).catch((message) => {
+          alert(message);
+        });
+      };
+      document.body.appendChild(script);
+      
+    </script>
+  
+</body>
+</html>
